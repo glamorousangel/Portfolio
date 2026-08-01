@@ -12,10 +12,10 @@ import Footer from "./components/Footer";
 function App() {
   const navItems = useMemo(
     () => [
-      { label: "ABOUT", id: "about" },
-      { label: "SKILLS", id: "skills" },
-      { label: "PROJECTS", id: "projects" },
-      { label: "CONTACT", id: "contact" },
+      { label: "About", id: "about" },
+      { label: "Skills", id: "skills" },
+      { label: "Projects", id: "projects" },
+      { label: "Contact", id: "contact" },
     ],
     [],
   );
