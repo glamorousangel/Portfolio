@@ -1,20 +1,29 @@
+import heroBackground from "../assets/bg.png";
+import heroLogo from "../assets/iconw.png";
+
 function Hero() {
   return (
-    <section id="home" className="hero">
-      <div className="container">
-        <h1>Hi, I'm Dorothy Miles Ang</h1>
+    <section
+      id="home"
+      className="hero"
+      style={{ backgroundImage: `url(${heroBackground})` }}
+    >
+      <div className="hero-overlay" />
 
-        <h3>Computer Science Student</h3>
+      <img src={heroLogo} alt="Dorothy logo" className="hero-logo" />
 
-        <p>
-          Passionate about software development, AI, and creating beautiful,
-          user-friendly applications.
+      <div className="hero-content">
+        <p className="hero-kicker">THE PORTFOLIO</p>
+
+        <h1 className="hero-title">
+          DOROTHY
+          <br />
+          MILES
+        </h1>
+
+        <p className="hero-subtitle">
+          BS Computer Science Student | Front-End &amp; UI/UX Enthusiast
         </p>
-
-        <div className="hero-buttons">
-          <button>View Projects</button>
-          <button className="outline">Contact Me</button>
-        </div>
       </div>
     </section>
   );

@@ -2,22 +2,23 @@ function Projects() {
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2>Projects</h2>
+        <p className="section-label">PROJECTS</p>
+        <h2>Selected work focused on clarity, craft, and impact.</h2>
 
         <div className="project-grid">
-          {[1, 2, 3].map((item) => (
+          {["Editorial Landing", "Mobile UI System", "Portfolio Redesign"].map(
+            (item) => (
             <div className="project-card" key={item}>
-              <div className="project-image">Image</div>
+              <div className="project-image">Preview</div>
 
-              <h3>Project {item}</h3>
+              <h3>{item}</h3>
 
-              <p>
-                A short description about this project goes here.
-              </p>
+              <p>A concise project summary goes here.</p>
 
-              <button>View Project</button>
+              <button type="button">View Project</button>
             </div>
-          ))}
+            ),
+          )}
         </div>
       </div>
     </section>

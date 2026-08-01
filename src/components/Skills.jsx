@@ -1,20 +1,17 @@
 const skills = [
-  "Java",
-  "Python",
-  "JavaScript",
-  "React",
-  "HTML",
-  "CSS",
-  "MySQL",
-  "Git",
-  "GitHub",
-  "Figma",
+  "Frontend Development",
+  "UI/UX Design",
+  "React & JavaScript",
+  "Brand-Driven Interfaces",
+  "Responsive Systems",
+  "Prototyping & Handoff",
 ];
 
 function Skills() {
   return (
     <section id="skills" className="section">
       <div className="container">
+        <p className="section-label">SKILLS</p>
         <h2>Skills</h2>
 
         <div className="skills-grid">

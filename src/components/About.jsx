@@ -2,13 +2,11 @@ function About() {
   return (
     <section id="about" className="section">
       <div className="container">
-        <h2>About Me</h2>
-
+        <p className="section-label">ABOUT</p>
+        <h2>Crafting clean, human-centered digital experiences.</h2>
         <p>
-          I am a Computer Science student who enjoys developing web
-          applications, mobile applications, and AI-powered systems. I love
-          learning new technologies and building projects that solve real-world
-          problems.
+          I blend software engineering with visual storytelling to design and
+          build interfaces that feel intuitive, refined, and purposeful.
         </p>
       </div>
     </section>
