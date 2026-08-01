@@ -511,26 +511,114 @@ main {
   opacity: 0.18;
 }
 
-.skills-grid,
-.project-grid {
-  margin-top: 34px;
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.skills-section{
+    padding:140px 0;
+    overflow:hidden;
 }
 
-.skill-card,
-.project-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 6px;
-  padding: 22px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+.skills-layout{
+    width:min(1800px,92vw);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:5px 1fr;
+    gap:500px;
+    align-items:center;
 }
 
-.skill-card {
-  font-family: "Montserrat", "Segoe UI", sans-serif;
-  letter-spacing: 0.03em;
+.skills-left{
+    z-index:2;
+}
+
+.skills-title{
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(4.8rem,8vw,7rem);
+    font-weight:500;
+    line-height:.92;
+    letter-spacing:-.03em;
+    margin:0;
+}
+
+.skills-right{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
+
+.marquee{
+    overflow:hidden;
+    width:100%;
+}
+
+.marquee-track{
+    display:flex;
+    width:max-content;
+    gap:20px;
+    animation:marquee 24s linear infinite;
+}
+
+.marquee.reverse .marquee-track{
+    animation-direction:reverse;
+}
+
+.marquee:hover .marquee-track{
+    animation-play-state:paused;
+}
+
+.skill-pill{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:16px 28px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    border:1px solid rgba(0,0,0,.12);
+
+    font-family:"Montserrat",sans-serif;
+    font-size:1rem;
+    font-weight:500;
+    white-space:nowrap;
+
+    transition:.35s ease;
+}
+
+.skill-pill:hover{
+    transform:translateY(-5px);
+    box-shadow:0 14px 28px rgba(0,0,0,.08);
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+}
+
+.blue{
+    background:#4F7CFF;
+}
+
+.green{
+    background:#38C172;
+}
+
+.purple{
+    background:#A855F7;
+}
+
+@keyframes marquee{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
 }
 
 .project-image {
@@ -562,56 +650,124 @@ main {
 button {
   font: inherit;
 }
-
-.project-card button,
-.contact-form button {
-  border: 1px solid #191919;
-  background: #191919;
-  color: #fff;
-  border-radius: 0;
-  padding: 10px 18px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-family: "Montserrat", "Segoe UI", sans-serif;
-  font-size: 0.75rem;
-  cursor: pointer;
-  transition: background 220ms ease, color 220ms ease;
+.contact-section{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:#F7F5F1;
 }
 
-.project-card button:hover,
-.contact-form button:hover {
-  background: transparent;
-  color: #191919;
+.contact-container{
+    width:min(1700px,90vw);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1.25fr .75fr;
+    gap:120px;
+    align-items:center;
 }
 
-.contact-form {
-  margin-top: 28px;
-  max-width: 700px;
-  display: grid;
-  gap: 14px;
+.contact-left{
+    display:flex;
+    flex-direction:column;
 }
 
-.contact-form input,
-.contact-form textarea {
-  font: inherit;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #fff;
-  padding: 13px 14px;
+.contact-heading{
+    margin-top:18px;
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:clamp(5rem,9vw,9rem);
+    line-height:.86;
+    font-weight:400;
+    letter-spacing:-3px;
+
+    color:#181818;
 }
 
-.contact-form textarea {
-  resize: vertical;
+.contact-right{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
 }
 
-.footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding: 24px;
-  text-align: center;
-  font-family: "Montserrat", "Segoe UI", sans-serif;
-  letter-spacing: 0.05em;
-  font-size: 0.78rem;
-  color: #5f5b56;
-  background: #faf8f5;
+.contact-description{
+
+    max-width:420px;
+
+    color:#454545;
+
+    font-family:"Montserrat",sans-serif;
+    font-size:1.08rem;
+    line-height:1.9;
+
+    margin-bottom:60px;
+}
+
+.contact-links h4{
+
+    margin-bottom:22px;
+
+    font-size:.82rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+
+    color:#777;
+}
+
+.contact-links{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-links a{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-size:1.05rem;
+
+    font-family:"Montserrat",sans-serif;
+
+    transition:.35s ease;
+}
+
+.contact-links a svg{
+
+    font-size:1.2rem;
+}
+
+.contact-links a:hover{
+
+    transform:translateX(12px);
+
+    color:#000;
+}
+
+@media(max-width:1000px){
+
+.contact-container{
+
+    grid-template-columns:1fr;
+    gap:70px;
+}
+
+.contact-heading{
+
+    font-size:clamp(4rem,14vw,6rem);
+}
+
+.contact-description{
+
+    max-width:100%;
+}
+
 }
 
 @keyframes fade-up {
@@ -1012,4 +1168,28 @@ button {
     transform: none;
     filter: none;
   }
+}
+
+.footer {
+  background: #000;
+  color: rgba(255, 255, 255, 0.75);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 32px 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  font-weight: 400;
 }

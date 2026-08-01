@@ -1,20 +1,77 @@
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+
 function Contact() {
   return (
-    <section id="contact" className="section">
-      <div className="container">
-        <p className="section-label">CONTACT</p>
-        <h2>Let us create something thoughtful together.</h2>
+    <section id="contact" className="contact-section">
 
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
+      <div className="contact-container">
 
-          <input type="email" placeholder="Email Address" />
+        {/* LEFT SIDE */}
 
-          <textarea rows="5" placeholder="Message"></textarea>
+        <div className="contact-left">
 
-          <button type="button">Send Message</button>
-        </form>
+          <h2 className="contact-heading">
+            LET'S BUILD
+            <br />
+            SOMETHING
+            <br />
+            MEANINGFUL.
+          </h2>
+
+        </div>
+
+        {/* RIGHT SIDE */}
+
+        <div className="contact-right">
+
+          <p className="contact-description">
+            I'm always open to discussing new opportunities,
+            internships, collaborations, freelance projects,
+            or simply connecting with fellow developers and
+            designers. Feel free to reach out anytime.
+          </p>
+
+          <div className="contact-links">
+
+            <h4>LET'S CONNECT</h4>
+
+            <a
+              href="mailto:dmilesang@gmail.com?subject=Portfolio Inquiry"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaEnvelope />
+              <span>Email</span>
+            </a>
+
+            <a
+              href="https://github.com/glamorousangel"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaGithub />
+              <span>GitHub</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/dmilesang/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+              <span>LinkedIn</span>
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
+
     </section>
   );
 }
