@@ -52,9 +52,18 @@ function Navbar({ items, activeSection }) {
   return (
     <header ref={navbarRef} className={`navbar ${isSticky ? "is-sticky" : ""}`}>
       <div className="navbar-inner">
-        <div className="nav-logo-wrap" aria-hidden={!isSticky}>
-          <img src={stickyLogo} alt="Dorothy logo" className="nav-logo" />
-        </div>
+        <button
+          type="button"
+          className="nav-logo-wrap"
+          aria-label="Back to top"
+          onClick={() => handleNavClick("home")}
+        >
+          <img
+            src={stickyLogo}
+            alt="Dorothy logo"
+            className="nav-logo"
+          />
+        </button>
 
         <nav className="nav-links" aria-label="Primary Navigation">
           {items.map((item) => (

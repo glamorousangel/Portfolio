@@ -40,9 +40,9 @@ function Contact() {
             <h4>LET'S CONNECT</h4>
 
             <a
-              href="mailto:dmilesang@gmail.com?subject=Portfolio Inquiry"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=dmilesang@gmail.com&su=Portfolio%20Inquiry"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <FaEnvelope />
               <span>Email</span>
